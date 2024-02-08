@@ -23,6 +23,7 @@ from leafproject import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('leafapp.urls')),
+    path('cred/',include('credapp.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
